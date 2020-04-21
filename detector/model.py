@@ -217,5 +217,3 @@ def print_top_features(vec, count_vec, clf):
             print('%20s\t%.6f' % (features[fi], coef[ci][fi]))
         print()
 
-# if __name__ == "__main__":
-#     sys.exit(main())  # pragma: no cover

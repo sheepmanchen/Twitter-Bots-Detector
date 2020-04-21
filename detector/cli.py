@@ -50,7 +50,7 @@ def test(directory):
         print('probas=', probas)
     print("accuracy: {:.2f}".format(count / total))
 
-
-
 if __name__ == "__main__":
+    from .app import app
+    app.run(port=5000, debug=True)
     sys.exit(main())  #from app import app pragma: no cover
