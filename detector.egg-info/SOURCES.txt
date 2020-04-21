@@ -16,3 +16,4 @@ detector.egg-info/top_level.txt
 detector/app/__init__.py
 detector/app/forms.py
 detector/app/routes.py
+detector/app/static/__init__.py

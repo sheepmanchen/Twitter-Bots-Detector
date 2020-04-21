@@ -15,8 +15,8 @@ def write_default_config(path):
 # if 'OSNA_HOME' in os.environ:
 #     osna_path = os.environ['OSNA_HOME']
 # else:
-detector_path = os.environ['HOME'] + os.path.sep + '.detector' + os.path.sep
-
+# detector_path = os.environ['HOME'] + os.path.sep + '.detector' + os.path.sep
+detector_path = os.getcwd() + os.path.sep + '.detector' + os.path.sep
 # Make osna directory if not present
 try:
     os.makedirs(detector_path)
