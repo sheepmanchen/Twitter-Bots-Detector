@@ -3,11 +3,11 @@ from detector import credentials_path, clf_path
 from detector.model import train
 from detector.mytwitter import Twitter
 import sys
-from .model import get_user_features
+from detector.model import get_user_features
 import pickle
 import sys
 import numpy as np
-from .app.forms import MyForm
+from detector.app.forms import MyForm
 from flask import render_template, flash, redirect, session, request
 
 
