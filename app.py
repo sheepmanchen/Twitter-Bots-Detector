@@ -19,7 +19,8 @@ def main(args=None):
               default=credentials_path, help='a json file of twitter tokens')
 @click.option('-p', '--port', required=False, default=5000, show_default=True, help='port of web server')
 def web(twitter_credentials, port):
-    from detector.app import app
+    # from detector.app import app
+    from .rout import app
     app.run(host='0.0.0.0', debug=True, port=port)
 
 @main.command('train')
@@ -51,6 +52,6 @@ def test(directory):
     print("accuracy: {:.2f}".format(count / total))
 
 if __name__ == "__main__":
-    from detector.app import app
+    from .rout import app
     app.run(port=5000, debug=True)
     sys.exit(main())  #from app import app pragma: no cover
