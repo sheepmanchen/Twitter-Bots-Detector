@@ -1,0 +1,7 @@
+[console_scripts]
+detector = detector.cli:main
+predict = detector.cli:predict
+stats = detector.cli:stats
+train = detector.cli:train
+web = detector.cli:web
+

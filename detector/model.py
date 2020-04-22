@@ -12,8 +12,8 @@ from sklearn.metrics import accuracy_score, classification_report
 from sklearn.neural_network import MLPClassifier
 from sklearn.preprocessing import scale, StandardScaler
 from scipy.sparse import hstack  # "horizontal stack"
-from . import credentials_path, clf_path
-from .read_data import read_dir
+from detector import credentials_path, clf_path
+from detector.read_data import read_dir
 
 # @click.group()
 # def main(args=None):

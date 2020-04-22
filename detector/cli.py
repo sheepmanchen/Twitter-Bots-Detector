@@ -1,6 +1,6 @@
 import click
 from detector import credentials_path, clf_path
-from detector import model
+from detector.model import train
 from detector.mytwitter import Twitter
 import sys
 from detector.app.routes import get_prediction
@@ -25,7 +25,7 @@ def web(twitter_credentials, port):
 @main.command('train')
 @click.argument('directory', type=click.Path(exists=True))
 def train_model(directory):
-    model.train(directory)
+    train(directory)
 
 @main.command('predict')
 @click.argument('directory', type=click.Path(exists=True))

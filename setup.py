@@ -46,7 +46,7 @@ setup(
     include_package_data=True,
     keywords='detector',
     name='detector',
-    packages=find_packages(include=['detector', 'detector.app', 'detector.app.templates', 'detector.app.static']),
+    packages=find_packages(),
     py_modules = [],
     setup_requires=setup_requirements,
     test_suite='tests',
