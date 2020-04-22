@@ -166,7 +166,8 @@ def train(directory):
 
     X_words = count_vec.fit_transform(df.tweets_texts)
     print(X_words.shape)
-    optimal_X_all = hstack([X, X_words]).tocsr()
+    # optimal_X_all = hstack([X, X_words]).tocsr()
+    optimal_X_all = X
     scaler = StandardScaler(with_mean=False)  # optionally with_mean=False to save memory (keep matrix sparse)
     optimal_X_all = scaler.fit_transform(optimal_X_all)
     # optimal_X_all = scaler.fit_transform(optimal_X_all.todense())

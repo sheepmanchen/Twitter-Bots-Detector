@@ -2,7 +2,6 @@ README.md
 setup.py
 detector/__init__.py
 detector/cli.py
-detector/detector.py
 detector/model.py
 detector/mytwitter.py
 detector/read_data.py
