@@ -1,9 +1,9 @@
 import click
-from . import credentials_path, clf_path
-from . import model
-from .mytwitter import Twitter
+from detector import credentials_path, clf_path
+from detector import model
+from detector.mytwitter import Twitter
 import sys
-from .app.routes import get_prediction
+from detector.app.routes import get_prediction
 import pickle
 
 twapi = Twitter(credentials_path)
