@@ -3,7 +3,8 @@ from detector import credentials_path, clf_path
 from detector.model import train
 from detector.mytwitter import Twitter
 import sys
-from detector.app import get_prediction
+# from detector.app import get_prediction
+from .rout import get_prediction
 import pickle
 
 twapi = Twitter(credentials_path)
