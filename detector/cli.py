@@ -19,7 +19,7 @@ def main(args=None):
               default=credentials_path, help='a json file of twitter tokens')
 @click.option('-p', '--port', required=False, default=5000, show_default=True, help='port of web server')
 def web(twitter_credentials, port):
-    from .app import app
+    # from .app import app
     app.run(host='0.0.0.0', debug=True, port=port)
 
 @main.command('train')
@@ -51,6 +51,11 @@ def test(directory):
     print("accuracy: {:.2f}".format(count / total))
 
 if __name__ == "__main__":
-    from .app import app
+    # from .app import app
+    from flask import Flask
+
+    app = Flask(__name__)
+    app.config['SECRET_KEY'] = 'you-will-never-guess'  # for CSRF
+    # from .app import routes
     app.run(port=5000, debug=True)
     sys.exit(main())  #from app import app pragma: no cover

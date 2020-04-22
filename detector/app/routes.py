@@ -1,5 +1,5 @@
 from flask import render_template, flash, redirect, session, request
-from . import app
+from ..cli import app
 from .forms import MyForm
 from ..mytwitter import Twitter
 #from ..u import get_twitter_data, N_TWEETS
