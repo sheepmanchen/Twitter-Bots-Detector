@@ -1,1 +1,1 @@
-web:gunicorn cli:app
+web:gunicorn detector.cli:app
