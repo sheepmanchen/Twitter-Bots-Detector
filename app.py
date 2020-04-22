@@ -4,7 +4,7 @@ from detector.model import train
 from detector.mytwitter import Twitter
 import sys
 # from detector.app import get_prediction
-from .rout import get_prediction
+from detector.app import get_prediction
 import pickle
 
 twapi = Twitter(credentials_path)
@@ -21,7 +21,7 @@ def main(args=None):
 @click.option('-p', '--port', required=False, default=5000, show_default=True, help='port of web server')
 def web(twitter_credentials, port):
     # from detector.app import app
-    from .rout import app
+    from detector.app import app
     app.run(host='0.0.0.0', debug=True, port=port)
 
 @main.command('train')
@@ -53,6 +53,6 @@ def test(directory):
     print("accuracy: {:.2f}".format(count / total))
 
 if __name__ == "__main__":
-    from .rout import app
+    from detector.app import app
     app.run(port=5000, debug=True)
     sys.exit(main())  #from app import app pragma: no cover
