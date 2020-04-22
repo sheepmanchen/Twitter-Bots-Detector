@@ -1,1 +1,1 @@
-web:gunicorn detector.cli:app
+web:gunicorn --chdir detector cli:app
